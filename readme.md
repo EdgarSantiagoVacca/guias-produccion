@@ -1,5 +1,12 @@
+<table>
+  <tr>
+    <td><img width="100" src="./img/logo-takub.svg"></td>
+    <td><h1>Guías de procesos en producción</h1></td>
+  </tr>
+</table>
+
 <h1>
-  <img width="100" src="./img/logo-takub.svg" style="vertical-align:middle;"> Guías de procesos en producción
+  <img width="100" src="./img/logo-takub.svg"> Guías de procesos en producción
 </h1>
 
 Las guías de procesos son una herramienta fundamental para lograr una gestión eficiente y eficaz. Estas guías te brindarán una descripción detallada de cada paso a seguir en las diferentes tareas a desarrollar en la empresa, lo que te ayudará a mejorar la eficiencia, la calidad y la productividad. 
