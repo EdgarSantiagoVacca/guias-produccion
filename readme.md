@@ -1,13 +1,17 @@
 <style>
   td, th {
-    border: none!important;
+    border: none !important;
   }
 </style>
 
 <table>
   <tr>
-    <td><img width="100" src="./img/logo-takub.svg"></td>
-    <td><h1>Guías de procesos en producción</h1></td>
+    <td style="border: none">
+      <img width="100" src="./img/logo-takub.svg">
+    </td>
+    <td style="border: none">
+      <h1>Guías de procesos en producción</h1>
+    </td>
   </tr>
 </table>
 
