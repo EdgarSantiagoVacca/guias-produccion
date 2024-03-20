@@ -4,15 +4,18 @@
   }
 </style>
 
-<table>
-  <tr>
-    <td style="border: none">
-      <img width="100" src="./img/logo-takub.svg">
-    </td>
-    <td style="border: none">
-      <h1>Guías de procesos en producción</h1>
-    </td>
-  </tr>
+<table class="images" width="100%"  style="border:0px solid white; width:100%;">
+    <tr style="border: 0px;">
+        <td width="33%" style="border:0px; width:33.33%">
+            <img src="..." />
+        </td>
+        <td width="33%" style="border:0px; width:33.33%">
+            <img src="..." />
+        </td>
+        <td width="33%" style="border:0px; width:33.33%">
+            <img src="..." />
+        </td>
+    </tr>
 </table>
 
 <h1>
