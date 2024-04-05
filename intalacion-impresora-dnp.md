@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <td><img width="100" src="./img/logo-takub.svg"></td>
+    <td><img width="150px" src="./img/logo-takub.svg"></td>
     <td><h1>Instalación impresora DNP</h1></td>
   </tr>
 </table>
@@ -24,7 +24,7 @@ Se describirán los pasos necesarios para instalar las impresoras **DNP** en **U
 
   ![media size][mediaSize]
 
-### No reconoce la impresora correctamente automáticamente
+### No reconoce la impresora correctamente
 
 Estes pasos solo se deben hacer si la impresora **no es reconocida** o es **detectada con un driver genérico** y ya haber echo los pasos anteriores.
 
