@@ -17,7 +17,7 @@ Se describirán los pasos necesarios para instalar las impresoras **DNP** en **U
   > - 4x6
   > - 2x6*2
 
-  ![media size][mediaSize]
+![media size][mediaSize]
 
 ### No reconoce la impresora correctamente
 
@@ -26,8 +26,10 @@ Estes pasos solo se deben hacer si la impresora **no es reconocida** o es **dete
 - Se debe abrir el navegador en la siguiente ruta:
   > localhost:631
 - Luego hacer click en la pestaña **administración**:
+
 ![admin cups][adminCups]
 - Se debe ingresar el usuario y contraseña:
+
 ![login cups][loginCups]
 - Para conocer el nombre de usuario se debe ir a la terminal:
   ```ShellSession
@@ -35,16 +37,22 @@ Estes pasos solo se deben hacer si la impresora **no es reconocida** o es **dete
   ```
 - Copiamos el nombre e ingresamos la contraseña.
 - Seleccionamos la impresora en **Impresoras locales** y click en **siguiente**:
+
 ![paso 1 cups][paso1Cups]
 - Avanzamos con el botón **siguiente**:
+
 ![paso 2 cups][paso2Cups]
 - Seleccionamos la Marca **Dai Nippon Printing** y click en **siguiente**:
+
 ![paso 3 cups][paso3Cups]
 - Seleccionamos la Modelo **Dai Nippon Printing DSRX1 - CUPS...** y click en **siguiente**:
+
 ![paso 4 cups][paso4Cups]
 - Se crea la impresora exitosamente:
+
 ![paso 5 cups][paso5Cups]
 - Para finalizar se verifica la impresora en el sistema:
+
 ![paso 6 cups][paso6Cups]
 
 [mediaSize]: ./img/media-size-DS-RX1.png
