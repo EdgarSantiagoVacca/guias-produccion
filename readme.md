@@ -9,6 +9,7 @@ Te invitamos a utilizar estas guías de procesos y a compartir tus comentarios y
 - [**Instalación impresora Epson L800**](./intalacion-impresora-epson-l800.md)
 - [**Instalación impresora Epson L805**](./intalacion-impresora-epson-l805.md)
 - [**Instalación impresora DNP**](./intalacion-impresora-dnp.md)
+- [**Proceso para encender PC en Windows o Ubuntud por defecto**](./cambiar-so.md)
 
 
 <!-- ![Logo Takub][logoTakub]
