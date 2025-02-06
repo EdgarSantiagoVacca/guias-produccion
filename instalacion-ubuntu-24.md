@@ -178,7 +178,7 @@
 ## Instalar complementos para APPs Takub:
 - Instalar complementos:
   ```ShellSession
-  $ sudo apt-get install build-essential libcurl4-openssl-dev
+  $ sudo apt-get install build-essential libcurl4-openssl-dev libxml2-dev
   ```
 - Instalar ImageMagick:
   ```ShellSession
@@ -264,22 +264,25 @@
   $ sudo systemctl stop apache2
   $ sudo systemctl disable apache2
   ```
-> Recomiendo probar la instalación desde este [enlace](https://www.phusionpassenger.com/docs/tutorials/deploy_to_production/installations/oss/digital_ocean/ruby/nginx/)
-- Pasos que se siguieron:
+- Ahora procedemos a instalar el servidor:
   ```ShellSession
-  $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
-  $ sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger $(lsb_release -cs) main > /etc/apt/sources.list.d/passenger.list'
+  $ sudo apt-get install nginx
+  $ sudo apt-get install -y dirmngr gnupg apt-transport-https ca-certificates curl
+  $ curl https://oss-binaries.phusionpassenger.com/auto-software-signing-gpg-key.txt | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/phusion.gpg >/dev/null
+  $ sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger jammy main > /etc/apt/sources.list.d/passenger.list'
   $ sudo apt-get update
-  $ sudo apt-get install -y nginx-extras libnginx-mod-http-passenger
-  $ if [ ! -f /etc/nginx/modules-enabled/50-mod-http-passenger.conf ]; then sudo ln -s /usr/share/nginx/modules-available/mod-http-passenger.load /etc/nginx/modules-enabled/50-mod-http-passenger.conf ; fi
+  $ sudo apt-get install -y libnginx-mod-http-passenger
+  ```
+- Habilite el módulo Passenger Nginx y reinicie Nginx
+  ```ShellSession
+  $ si [ ! -f /etc/nginx/modules-enabled/50-mod-http-passenger.conf ]; entonces sudo ln -s /usr/share/nginx/modules-available/mod-http-passenger.load /etc/nginx/modules-enabled/50-mod-http-passenger.conf ; fi
   $ sudo ls /etc/nginx/conf.d/mod-http-passenger.conf
   $ which ruby
     ---> Verificar la ruta del RUBY, pero en le siguiente paso se debe colocar mejor la ruta de por default de RVM
   $ SUDO_EDITOR="gnome-text-editor" sudoedit /etc/nginx/conf.d/mod-http-passenger.conf 
-    ---> Cambiar esta variable:  passenger_ruby /home/#{usuario-xxxx}/.rvm/rubies/default/bin/ruby;
+    ---> Cambiar esta variable:  passenger_ruby /usr/share/rvm/rubies/default/bin/ruby;
   $ sudo service nginx restart
   ```
-- Reiniciar el PC
 - Verificar instalación del servidor:
   ```ShellSession
   $ sudo /usr/bin/passenger-config validate-install
@@ -299,13 +302,13 @@
 - Agregar la configuración del las apps:
   > Nota: Los proyectos Rails deben tener el archivo .ruby-version para que funcione la opción de especificar la versión de ruby en el archivo de configuración del servidor.
   ```
-  sserver {
+  server {
     listen 3010;
     server_name _;
     root /home/#{usuario-xxxx}/takub/photobooth2/public;
     passenger_enabled on;
     passenger_friendly_error_pages on;
-    passenger_ruby /home/takub-kiosk19/.rbenv/shims/ruby;
+    #passenger_ruby /home/takub-kiosk19/.rbenv/shims/ruby;
     #passenger_root /usr/lib/ruby/vendor_ruby/phusion_passenger/locations.ini;
     
     passenger_app_env production;
@@ -369,9 +372,8 @@
     access_log /var/log/nginx/challenge2.log;
   }
   ```
-
 ## Start Kiosk:
-- Crear un archivo llamado startKiosk.sh en la carpeta **takub/utiles-22**
+- Crear un archivo llamado startKiosk.sh en la carpeta **takub/utiles**
 - Agregar estos comandos:
   ```
   xmodmap -e 'pointer = 1 2 0 4 5 6 7 8 9'
@@ -384,7 +386,23 @@
 - En nombre colorcar: **Start Kiosk**
 - Comando: Buscar la ruta del archivo startKiosk.sh
 - Hacer clic **añadir**
-
+## Utils:
+- Ingresar a la carpeta de utiles
+  ```ShellSession
+  $ cd takub/utiles/
+  ```
+- Crear un archivo llamado utils
+  ```ShellSession
+  $ touch utils.sh
+  ```
+- Editar el archivo utils.sh
+  ```ShellSession
+  bundle install
+  RAILS_ENV=production rake db:create db:migrate db:seed
+  rake assets:precompile --trace RAILS_ENV=production
+  SUDO_EDITOR="gedit -w" sudoedit /etc/nginx/sites-enabled/portafolio
+  sudo service nginx restart
+  ```
 ## Problemas:
 - Cuando no reconoce el WIfI de Ubuntu en un pc que tiene Windows también.
   > Toca desactivar el inicio rápido de Windows, ver el siguiente [enlace](https://www.genbeta.com/paso-a-paso/tienes-problemas-arranque-windows-10-11-esta-opcion-te-puede-ayudar-a-solucionarlos-como-activar-inicio-rapido)
