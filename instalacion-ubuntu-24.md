@@ -373,7 +373,22 @@
   }
   ```
 ## Start Kiosk:
-- Crear un archivo llamado startKiosk.sh en la carpeta **takub/utiles**
+- Crear la carpeta utiles:
+  ```ShellSession
+  $ mkdir takub/utiles
+  ```
+- Ingresar a la carpeta de utiles
+  ```ShellSession
+  $ cd takub/utiles/
+  ```
+- Crear un archivo llamado utils
+  ```ShellSession
+  $ touch startKiosk.sh
+  ```
+- Abrir el archivo:
+  ```ShellSession
+  $ gedit startKiosk.sh
+  ```
 - Agregar estos comandos:
   ```
   xmodmap -e 'pointer = 1 2 0 4 5 6 7 8 9'
@@ -381,11 +396,30 @@
   #xrandr -o left
   chromium-browser http://localhost:3012/apps/1/welcome --use-fake-ui-for-media-stream --kiosk
   ```
+- Guardar y cerrar.
 - Abrir el programa **Aplicaciones al inicio**
 - Hacer clic en **añadir**
 - En nombre colorcar: **Start Kiosk**
 - Comando: Buscar la ruta del archivo startKiosk.sh
 - Hacer clic **añadir**
+## Stop Kiosk:
+- Ingresar a la carpeta de utiles
+  ```ShellSession
+  $ cd takub/utiles/
+  ```
+- Crear un archivo llamado utils
+  ```ShellSession
+  $ touch stopKiosk.sh
+  ```
+- Abrir el archivo:
+  ```ShellSession
+  $ gedit stopKiosk.sh
+  ```
+- Agregar estos comandos:
+  ```
+  xmodmap -e 'pointer = default'
+  ```
+- Guardar y cerrar.
 ## Utils:
 - Ingresar a la carpeta de utiles
   ```ShellSession
@@ -393,7 +427,7 @@
   ```
 - Crear un archivo llamado utils
   ```ShellSession
-  $ touch utils.sh
+  $ touch utils
   ```
 - Editar el archivo utils.sh
   ```ShellSession
