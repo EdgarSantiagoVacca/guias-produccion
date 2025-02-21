@@ -275,7 +275,7 @@
   ```
 - Habilite el módulo Passenger Nginx y reinicie Nginx
   ```ShellSession
-  $ si [ ! -f /etc/nginx/modules-enabled/50-mod-http-passenger.conf ]; entonces sudo ln -s /usr/share/nginx/modules-available/mod-http-passenger.load /etc/nginx/modules-enabled/50-mod-http-passenger.conf ; fi
+  $ if [ ! -f /etc/nginx/modules-enabled/50-mod-http-passenger.conf ]; then sudo ln -s /usr/share/nginx/modules-available/mod-http-passenger.load /etc/nginx/modules-enabled/50-mod-http-passenger.conf ; fi
   $ sudo ls /etc/nginx/conf.d/mod-http-passenger.conf
   $ which ruby
     ---> Verificar la ruta del RUBY, pero en le siguiente paso se debe colocar mejor la ruta de por default de RVM
