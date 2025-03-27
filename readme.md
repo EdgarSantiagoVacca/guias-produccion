@@ -10,7 +10,7 @@ Te invitamos a utilizar estas guías de procesos y a compartir tus comentarios y
 - [**Instalación impresora Epson L805**](./intalacion-impresora-epson-l805.md)
 - [**Instalación impresora DNP**](./intalacion-impresora-dnp.md)
 - [**Proceso para encender PC en Windows o Ubuntud por defecto**](./cambiar-so.md)
-
+- [**Proceso para configurar el táctil**](./configuracion-tactil.md)
 
 <!-- ![Logo Takub][logoTakub]
 [logoTakub]: ./img/logo-takub.svg -->

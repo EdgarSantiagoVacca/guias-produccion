@@ -20,3 +20,4 @@ Se describirán los pasos necesarios para **configurar** la orientación del **m
         ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1" # 270 degree clockwise
         ENV{LIBINPUT_CALIBRATION_MATRIX}="-1 0 1 1 0 0" # reflect along y axis
   ```
+- Finalmente se debe reinicar el PC para que se tome la nueva configuración.
