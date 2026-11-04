@@ -1,9 +1,3 @@
-<p align="center">
-  <img src="./img/logo-takub-nuevo.svg" alt="Takub" width="160">
-</p>
-
-<p align="center"><sub><b>GUÍAS DE PRODUCCIÓN</b></sub></p>
-
 # Tester de tomacorrientes HT107B
 
 Cómo comprobar que un tomacorriente está bien cableado y que su protección diferencial funciona.
