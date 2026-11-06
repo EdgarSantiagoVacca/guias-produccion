@@ -12,6 +12,7 @@ Te invitamos a utilizar estas guías de procesos y a compartir tus comentarios y
 - [**Proceso para encender PC en Windows o Ubuntud por defecto**](./cambiar-so.md)
 - [**Proceso para configurar el táctil**](./configuracion-tactil.md)
 - [**Guía del tester de tomacorrientes HT107B**](./guia-tester-ht107b.md)
+- [**Guía del tester de cables USB Treedix**](./guia-tester-cables-treedix.md)
 
 <!-- ![Logo Takub][logoTakub]
 [logoTakub]: ./img/logo-takub.svg -->
